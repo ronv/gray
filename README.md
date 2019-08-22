@@ -18,3 +18,5 @@ Minimal one-column portfolio/blog theme built for Jekyll. Theme weighs under 3kb
 - http security headers
 
 ![Screenshot](screenshot.png)
+
+# Demo [here](https://gray-jekyll.netlify.com/)
