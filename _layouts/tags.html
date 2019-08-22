@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article role="article">
+<h1>All tags</h1>
+{% assign tags = site.tags | sort %}
+<ul>
+{% for tag in tags %}
+ <li>
+    <a href="/tag/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+</li>
+
+{% endfor %}
+</ul>
+</article>
+
+
+<article role="article">
+	<h1>All posts per tag</h1>
+	{% for tag in site.tags %}
+	{% capture tag_name %}{{ tag | first }}{% endcapture %}
+<h1>#{{ tag_name }}</h1>
+    <ul>
+      {% for post in site.tags[tag_name] %}
+      
+      <li><a class="post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+
+      {% endfor %}
+    </ul>
+    {% endfor %}
+</article>

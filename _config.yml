@@ -1,0 +1,95 @@
+site: Gray - Single column blog and portfolio Jekyll theme
+url: # url
+author: # your name
+author:
+  name: # your name
+  email: # your email 
+  url: # url
+  avatar: 
+title: Gray - Single column blog and portfolio Jekyll theme
+description: Gray - Single column blog and portfolio Jekyll theme
+logo: 
+image: 
+twitter: # twitter 
+twitter:
+  username: # twitter
+  creator: # twitter
+  card: summary
+social:
+  name: Ronalds Vilcins
+  links:
+    - https://twitter.com/example
+    - https://www.dribbble.com/example
+    - https://github.com/example
+    - https://codepen.io/example
+  
+repository: ronv/website
+
+permalink: pretty
+
+disqus:
+  name: "your username" # required
+  noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
+
+paginate:            1000
+paginate_path:       "/page:num/"
+baseurl:             ""
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - disqus-for-jekyll
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  projects:
+    output: true
+    permalink: /projects/:slug
+  art:
+    output: true
+    permalink: /art/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"     
+      
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
